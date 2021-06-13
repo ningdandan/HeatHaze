@@ -43,7 +43,7 @@ body {
 	justify-content: center;
 	line-height: 40px;
 	transition: 0.25s ease all 0.75s;
-	color: #999;
+	color: #fff;
 	transform: translateZ(50px);
 }
 .loading-screen.hidden {

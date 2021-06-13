@@ -12,14 +12,6 @@ var loaded = false;
 var load_counter = 0;
 
 // Initialize images for layers
-// var background = new Image();
-// var shadows = new Image();
-// var clouds = new Image();
-// var floaties_1 = new Image();
-// var floaties_2 = new Image();
-// var mask = new Image();
-// var humans = new Image();
-// var floaties_3 = new Image();
 
 var background = new Image();
 var radiant = new Image();
@@ -30,6 +22,7 @@ var horse = new Image();
 var levi = new Image();
 var mask = new Image();
 var fire_top = new Image();
+var fire_top1 = new Image();
 var fire_highlight = new Image();
 var fire_spark = new Image();
 var fire_spark_l = new Image();
@@ -45,7 +38,7 @@ var layer_list = [
 	{
 		'image': background,
 		'src': './image/resized/01_900.png',
-		'z_index': 0,
+		'z_index': -1,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
@@ -69,7 +62,7 @@ var layer_list = [
 	{
 		'image': erwin,
 		'src': './image/resized/04.png',
-		'z_index': -2,
+		'z_index': -1,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
@@ -77,7 +70,7 @@ var layer_list = [
 	{
 		'image': fire_bottom,
 		'src': './image/resized/05.png',
-		'z_index': -0.5,
+		'z_index': -3,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
@@ -100,9 +93,17 @@ var layer_list = [
 		'opacity': 1
 	},
 	{
+		'image': fire_top1,
+		'src': './image/resized/08.png',
+		'z_index': 3,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 0.6
+	},
+	{
 		'image': levi,
 		'src': './image/resized/07.png',
-		'z_index': 0.9,
+		'z_index': 4,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
@@ -110,7 +111,7 @@ var layer_list = [
 	{
 		'image': horse,
 		'src': './image/resized/06.png',
-		'z_index': 0.5,
+		'z_index': 6,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
@@ -119,7 +120,7 @@ var layer_list = [
 	{
 		'image': fire_top,
 		'src': './image/resized/08.png',
-		'z_index': 2,
+		'z_index': 6,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 0.6
@@ -127,7 +128,7 @@ var layer_list = [
 	{
 		'image': fire_highlight,
 		'src': './image/resized/09.png',
-		'z_index': 3,
+		'z_index': 7,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
@@ -136,7 +137,7 @@ var layer_list = [
 	{
 		'image': fire_spark_l,
 		'src': './image/resized/spark_l.png',
-		'z_index': 5,
+		'z_index': 20,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
