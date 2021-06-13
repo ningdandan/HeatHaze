@@ -16,16 +16,21 @@ var load_counter = 0;
 var background = new Image();
 var radiant = new Image();
 var halo = new Image();
+var erwin_shadow = new Image();
 var erwin = new Image();
 var fire_bottom = new Image();
+var horse_shadow = new Image();
 var horse = new Image();
+var levi_shadow = new Image();
 var levi = new Image();
+var sword = new Image();
 var mask = new Image();
-var fire_top = new Image();
-var fire_top1 = new Image();
-var fire_highlight = new Image();
-var fire_spark = new Image();
-var fire_spark_l = new Image();
+var fire_top_1 = new Image();
+var fire_top_2 = new Image();
+var fire_top_3 = new Image();
+var fire_spark_1 = new Image();
+var fire_spark_2 = new Image();
+var fire_spark_3 = new Image();
 // Create a list of layer objects
 // Each object contains the following:
 // image: a reference to the image created above
@@ -37,7 +42,7 @@ var fire_spark_l = new Image();
 var layer_list = [
 	{
 		'image': background,
-		'src': './image/resized/01_900.png',
+		'src': './image/compressed/background-min.png',
 		'z_index': -1,
 		'position': {x: 0, y: 0},
 		'blend': null,
@@ -45,7 +50,7 @@ var layer_list = [
 	},
 	{
 		'image': radiant,
-		'src': './image/resized/02_900.png',
+		'src': './image/compressed/radiant-min.png',
 		'z_index':-1,
 		'position': {x: 0, y: 0},
 		'blend': null,
@@ -53,15 +58,23 @@ var layer_list = [
 	},
 	{
 		'image': halo,
-		'src': './image/resized/03.png',
+		'src': './image/compressed/halo-min.png',
 		'z_index': -3,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
 	{
+		'image': erwin_shadow,
+		'src': './image/compressed/erwin_shadow-min.png',
+		'z_index': -2,
+		'position': {x: 0, y: 0},
+		'blend': 'multiply',
+		'opacity': 0.3
+	},
+	{
 		'image': erwin,
-		'src': './image/resized/04.png',
+		'src': './image/compressed/erwin-min.png',
 		'z_index': -1,
 		'position': {x: 0, y: 0},
 		'blend': null,
@@ -69,75 +82,107 @@ var layer_list = [
 	},
 	{
 		'image': fire_bottom,
-		'src': './image/resized/05.png',
+		'src': './image/compressed/fire_bottom-min.png',
 		'z_index': -3,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
-	{
-		'image': fire_spark,
-		'src': './image/resized/10.png',
-		'z_index': 0.2,
-		'position': {x: 0, y: 0},
-		'blend': null,
-		'opacity': 1
-	}
-	,
+	
 	{
 		'image': mask,
-		'src': './image/resized/blackmask.png',
+		'src': './image/compressed/mask-min.png',
 		'z_index': 0,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
 	{
-		'image': fire_top1,
-		'src': './image/resized/08.png',
+		'image': fire_top_1,
+		'src': './image/compressed/fire_top_1-min.png',
 		'z_index': 3,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 0.6
 	},
 	{
-		'image': levi,
-		'src': './image/resized/07.png',
-		'z_index': 4,
+		'image': levi_shadow,
+		'src': './image/compressed/levi_shadow-min.png',
+		'z_index': 0,
 		'position': {x: 0, y: 0},
-		'blend': null,
-		'opacity': 1
+		'blend': 'multiply',
+		'opacity': 0.5
 	},
 	{
-		'image': horse,
-		'src': './image/resized/06.png',
-		'z_index': 6,
+		'image': horse_shadow,
+		'src': './image/compressed/horse_shadow-min.png',
+		'z_index': 0,
+		'position': {x: 0, y: 0},
+		'blend': 'multiply',
+		'opacity': 0.5
+	},
+	{
+		'image': levi,
+		'src': './image/compressed/levi-min.png',
+		'z_index': 4,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
 	
 	{
-		'image': fire_top,
-		'src': './image/resized/08.png',
+		'image': horse,
+		'src': './image/compressed/horse-min.png',
+		'z_index': 5,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 1
+	},
+	{
+		'image': sword,
+		'src': './image/compressed/sword-min.png',
+		'z_index': 4.1,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 1
+	},
+	{
+		'image': fire_top_2,
+		'src': './image/compressed/fire_top_2-min.png',
 		'z_index': 6,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 0.6
 	},
 	{
-		'image': fire_highlight,
-		'src': './image/resized/09.png',
+		'image': fire_top_3,
+		'src': './image/compressed/fire_top_3-min.png',
 		'z_index': 7,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
-	
 	{
-		'image': fire_spark_l,
-		'src': './image/resized/spark_l.png',
-		'z_index': 20,
+		'image': fire_spark_1,
+		'src': './image/compressed/fire_spark_1-min.png',
+		'z_index': 10,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 1
+	}
+	,
+	{
+		'image': fire_spark_2,
+		'src': './image/compressed/fire_spark_2-min.png',
+		'z_index': 15,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 1
+	},
+	{
+		'image': fire_spark_3,
+		'src': './image/compressed/fire_spark_3_1-min.png',
+		'z_index': 25,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
