@@ -65,6 +65,14 @@ var layer_list = [
 		'opacity': 1
 	},
 	{
+		'image': fire_bottom,
+		'src': './image/compressed/fire_bottom-min.png',
+		'z_index': -3,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 0.5
+	},
+	{
 		'image': erwin_shadow,
 		'src': './image/compressed/erwin_shadow-min.png',
 		'z_index': -2,
@@ -72,6 +80,7 @@ var layer_list = [
 		'blend': 'multiply',
 		'opacity': 0.3
 	},
+	
 	{
 		'image': erwin,
 		'src': './image/compressed/erwin-min.png',
@@ -80,15 +89,41 @@ var layer_list = [
 		'blend': null,
 		'opacity': 1
 	},
+	
 	{
-		'image': fire_bottom,
-		'src': './image/compressed/fire_bottom-min.png',
-		'z_index': -3,
+		'image': fire_top_1,
+		'src': './image/compressed/fire_top_1-min.png',
+		'z_index': -1.4,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 0.6
+	},
+	{
+		'image': fire_top_2,
+		'src': './image/compressed/fire_top_2-min.png',
+		'z_index': -1,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 0.6
+	},
+	{
+		'image': fire_top_3,
+		'src': './image/compressed/fire_top_3-min.png',
+		'z_index': -0.6,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
 	
+	{
+		'image': fire_spark_1,
+		'src': './image/compressed/fire_spark_1-min.png',
+		'z_index': -2,
+		'position': {x: 0, y: 0},
+		'blend': null,
+		'opacity': 1
+	}
+	,
 	{
 		'image': mask,
 		'src': './image/compressed/mask-min.png',
@@ -96,14 +131,6 @@ var layer_list = [
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
-	},
-	{
-		'image': fire_top_1,
-		'src': './image/compressed/fire_top_1-min.png',
-		'z_index': 3,
-		'position': {x: 0, y: 0},
-		'blend': null,
-		'opacity': 0.6
 	},
 	{
 		'image': levi_shadow,
@@ -124,7 +151,7 @@ var layer_list = [
 	{
 		'image': levi,
 		'src': './image/compressed/levi-min.png',
-		'z_index': 4,
+		'z_index': 2,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
@@ -133,7 +160,7 @@ var layer_list = [
 	{
 		'image': horse,
 		'src': './image/compressed/horse-min.png',
-		'z_index': 5,
+		'z_index': 4,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
@@ -141,40 +168,17 @@ var layer_list = [
 	{
 		'image': sword,
 		'src': './image/compressed/sword-min.png',
-		'z_index': 4.1,
+		'z_index': 2.1,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
 	},
-	{
-		'image': fire_top_2,
-		'src': './image/compressed/fire_top_2-min.png',
-		'z_index': 6,
-		'position': {x: 0, y: 0},
-		'blend': null,
-		'opacity': 0.6
-	},
-	{
-		'image': fire_top_3,
-		'src': './image/compressed/fire_top_3-min.png',
-		'z_index': 7,
-		'position': {x: 0, y: 0},
-		'blend': null,
-		'opacity': 1
-	},
-	{
-		'image': fire_spark_1,
-		'src': './image/compressed/fire_spark_1-min.png',
-		'z_index': 10,
-		'position': {x: 0, y: 0},
-		'blend': null,
-		'opacity': 1
-	}
-	,
+	
+	
 	{
 		'image': fire_spark_2,
 		'src': './image/compressed/fire_spark_2-min.png',
-		'z_index': 15,
+		'z_index': 10,
 		'position': {x: 0, y: 0},
 		'blend': null,
 		'opacity': 1
